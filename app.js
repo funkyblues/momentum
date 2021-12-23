@@ -1,8 +1,12 @@
-const a = 3;
-const b = 2;
-const myName = "changuk";
+let a = 3;
+let b = 2;
+let myName = "wukddang";
 
 console.log(a + b);
 console.log(a * b);
 console.log(a / b);
-console.log("hello " + myName)
+console.log("hello " + myName);
+
+myName = "changuk";
+
+console.log("your new name is " + myName);
