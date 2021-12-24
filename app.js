@@ -1,17 +1,19 @@
-// const title = document.querySelector(".hello:first-child");
+const title = document.querySelector(".hello:first-child h1");
 
-// console.dir(title); 
-
-// /*불러온 title object의 style 속성에서 색을 변경한다~ */
-
-// title.style.color = "blue"
-
-const title = document.querySelector("div.hello:first-child h1");
+console.dir(title);
 
 function handleTitleClick() {
   title.style.color = "blue";
 }
 
+ function handleMouseEnter() {
+  title.innerText = "Mouse is here!"
+}
 
-/**click을 누를때만 handleTitleClick이 발동되도록, handleTitleClick() 이렇게 안보내고 함수 이름만 JS에게 보낸다! */
+function handleMouseLeave() {
+  title.innerText = "Mouse is gone!"
+}
+
 title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
