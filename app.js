@@ -1,25 +1,17 @@
-// const hellos = document.getElementsByClassName("hello");
+// const title = document.querySelector(".hello:first-child");
 
-// console.log(hellos);
+// console.dir(title); 
 
-// const title = document.getElementsByTagName("h1");
+// /*불러온 title object의 style 속성에서 색을 변경한다~ */
 
-// //tag는 anchor, div, section, button, 같은 걸 의미!
+// title.style.color = "blue"
 
-// console.log(title);
+const title = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+  title.style.color = "blue";
+}
 
 
-/*이것을 자주 쓴다~*/
-/*이것은 css selector 방식*/
-/*제일 첫번째만 가져옴 ㅋㅋ*/
-// const title = document.querySelector(".hello h1");
-
-// console.log(title);
-
-// const title = document.querySelectorAll(".hello h1");
-
-// console.log(title);
-
-const title = document.querySelectorAll(".hello h1:first-child");
-
-title.innerText = "hello"
+/**click을 누를때만 handleTitleClick이 발동되도록, handleTitleClick() 이렇게 안보내고 함수 이름만 JS에게 보낸다! */
+title.addEventListener("click", handleTitleClick);
